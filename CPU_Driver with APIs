@@ -1,0 +1,20 @@
+
+
+ void CpuDriver_SwitchToPrivledgeMode(void)
+{
+	__asm{
+		mov r0, #0x0;
+		SVC #0x1	;	// handler mode
+		MSR CONTROL, r0;
+	}
+	
+}
+
+
+void CpuDriver_SwitchToUserMode(void)
+{
+	__asm{
+		mov r0, #0x1;
+		MSR CONTROL, r0;
+	}
+}
