@@ -2,19 +2,19 @@
 
  void CpuDriver_SwitchToPrivledgeMode(void)
 {
-	__asm{
-		mov r0, #0x0;
-		SVC #0x1	;	// handler mode
-		MSR CONTROL, r0;
-	}
+	asm(
+		"mov r0, #0x0\n\t"
+		"SVC #0x1\n\t"		// handler mode
+		"MSR CONTROL, r0\n\t"
+	);
 	
 }
 
 
 void CpuDriver_SwitchToUserMode(void)
 {
-	__asm{
-		mov r0, #0x1;
-		MSR CONTROL, r0;
-	}
+	asm(
+		"mov r0, #0x1\n\t"
+		"MSR CONTROL, r0\n\t"
+	);
 }
