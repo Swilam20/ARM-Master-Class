@@ -3,8 +3,8 @@
  void CpuDriver_SwitchToPrivledgeMode(void)
 {
 	asm(
+	        "SVC #0x1\n\t"		// handler mode
 		"mov r0, #0x0\n\t"
-		"SVC #0x1\n\t"		// handler mode
 		"MSR CONTROL, r0\n\t"
 	);
 	
