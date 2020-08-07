@@ -1,12 +1,5 @@
-#include "Std_Types.h"
-
+void SystemInit(){}
 int main(void)
 { 
-	while(1)
-	{
-		
-		
-	}
-	return E_OK;
 	
 }

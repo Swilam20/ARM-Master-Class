@@ -1,0 +1,14 @@
+#ifndef GPT_CFG
+#define GPT_CFG
+#include "Gpt.h"
+
+#define  GPT_CONFIGURATION_OPTIONS  	3
+#define  NONE							0
+
+#define GPT_PREDEF_TIMER_100US_32BIT  	DISABLE
+#define GPT_PREDEF_TIMER_1US_16BIT		DISABLE
+#define GPT_PREDEF_TIMER_1US_24BIT		DISABLE
+#define GPT_PREDEF_TIMER_1US_32BIT      DISABLE
+
+
+#endif
